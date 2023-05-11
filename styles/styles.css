@@ -50,6 +50,7 @@ img {
 .prev:hover,
 .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
+  color: white;
 }
 
 .numbertext {
@@ -64,9 +65,9 @@ img {
 
 .caption-container {
   text-align: center;
-  background-color: #222;
+  background-color: white;
   padding: 2px 16px;
-  color: white;
+  color: black;
 }
 
 .row:after {
@@ -100,6 +101,9 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 }
+
+
+/* End of slideshow */
 
 header {
 	margin-top: 10px;
@@ -174,10 +178,12 @@ table {
 
 th {
 	font-size:35px;
+	padding-top: 15px;
 }
 
-tr {
+tr,td {
 	font-size: 20px;
+	padding-top: 15px;
 }
 
 .button-33 {
@@ -193,7 +199,7 @@ tr {
 	text-decoration: none;
 	transition: all 250ms;
 	border: 0;
-	font-size: 16px;
+	font-size: 34px;
 	user-select: none;
 	-webkit-user-select: none;
 	touch-action: manipulation;
