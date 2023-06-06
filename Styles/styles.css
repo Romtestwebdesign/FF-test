@@ -4,7 +4,8 @@
 */
 
 /* basic styling */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap");
 
 body {
   margin: 0;
@@ -13,7 +14,7 @@ body {
 
 h1 {
 	font-size: 75px;
-	font-family: "Montserrat";
+	font-family: "Lato";
 	color: #70d5ff;
 	margin-left: 10%;
 	margin-bottom: -10px;
@@ -23,7 +24,7 @@ h1 {
 footer {
 	background-color: #212529;
 	color: #fff;
-	font-family: "Montserrat";
+	font-family: "Lato";
 	padding: 20px;
 	padding-left: 50px;
 }
@@ -70,7 +71,7 @@ h2 {
 
 .body {
 	font-size: 30px;
-	font-family: "Montserrat";
+	font-family: "Lato";
 	margin-left: 0%;
 	margin-right: 0%;
 }
