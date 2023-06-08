@@ -126,17 +126,6 @@ h2 {
 	margin-top: -1px;
 }
 
-.video {
-	width: 95%;
-	height: 720px;
-	background-color: #212529;
-	padding: 4%;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	border-radius: 25px;
-}
-
 .desc {
 	margin-left: 1%;
 	margin-right: 1%;
@@ -149,6 +138,38 @@ h2 {
 
 
 /* Responsive Design */
+
+@media only screen and (max-width: 480px) {
+	
+	.video {
+		width: 95%;
+		height: 720px;
+		background-color: #212529;
+		padding: 4%;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		border-radius: 25px;
+	}
+}
+
+@media only screen and (min-width: 481px) {
+	
+	.video {
+		width: 95%;
+		height: 1080px;
+		background-color: #212529;
+		padding: 4%;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		border-radius: 25px;
+	}
+}
+
+
+
+
 
 .aspectwrapper {
   width: 100%;
@@ -169,7 +190,7 @@ h2 {
     height: 100%;
     overflow: hidden;
     pointer-events: none;
-    z-index: 150;
+    z-index: 15000;
 }
 
 .menu--visible {
@@ -189,7 +210,7 @@ h2 {
     display: flex;
     flex-direction: column;
     will-change: transform;
-    z-index: 160;
+    z-index: 16000;
     pointer-events: auto;            
 }
 

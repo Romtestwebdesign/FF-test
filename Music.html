@@ -19,6 +19,8 @@
 
 <link href="Styles/styles.css" rel="stylesheet">
 
+<link rel="stylesheet" href="https://unpkg.com/transition-style">
+
 <style>
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap");
@@ -118,8 +120,13 @@ p {
 .descholder {
 	position: absolute;
 	height: 100%;
-	
+	opacity: 100%;
 }
+
+.link {
+	color: #70d5ff;
+}
+
 
 .artwork img {
   position: absolute;
@@ -396,6 +403,7 @@ input[type="range"]::-ms-thumb:hover, input[type="range"]::-ms-thumb:focus, inpu
 
 
 <div class="player">
+	<div>
 	<span id="arm"></span>
 	<ul>
 		<li class="artwork" style="background:url(https://i.imgur.com/3idGgyU.png), url('http://upload.wikimedia.org/wikipedia/en/thumb/a/a8/Rising_sun_animals_US.jpg/220px-Rising_sun_animals_US.jpg') center no-repeat;">
@@ -449,14 +457,9 @@ input[type="range"]::-ms-thumb:hover, input[type="range"]::-ms-thumb:focus, inpu
 			</div>
 		</li>
 	</ul>
-	
+	</div>
 	<div class="descholder">
 		<p id="description">hi</p>
-		<br>
-		
-		<button onclick="location.href='https://tuyu-official.jp/en/'" type="button" class="button">
-			<span id="about" class="button-content">Slide Show</span>
-		</button>
 		
 	</div>
 
@@ -494,32 +497,29 @@ myMenu.addEventListener("click", toggleClassMenu, false);
 var playlist = [
 {
   "song": "神っぽいな (God-ish)",
-  "album": "Single",
+  "album": "Single (2021)",
   "artist": "PinnochioP",
   "artwork": "https://i.scdn.co/image/ab67616d0000b27315a5fc8d95f5aa2b7eecf7cd",
   "background": "https://linkcore-image.kicks.video/TCJPMVR0000868628/linkcore_image.jpg?width=800",
-  "description":"PinnochioP is a Japanese Vocaloid Producer and songwriter who creates Japanese Pop songs. I had been listening to his music here and there, but I never really followed him too closely as an artist. However, when he released the single God-ish, I was hooked. To me the song was so unique, and really separated him from other music producers.",
-  "about": "https://tuyu-official.jp/en/",
+  "description":"PinnochioP is a Japanese Vocaloid Producer and songwriter who creates Japanese Pop songs. I had been listening to his music here and there, but I never really followed him too closely as an artist. However, when he released the single God-ish, I was hooked. To me the song was so unique, and really separated him from other music producers. <a class='link' href='https://vocaloid.fandom.com/wiki/Pinocchio-P'>Learn More</a>",
   "mp3": "Songs/Godish.mp3" },
 
 {
   "song": "泥の分際で私だけの大切を奪おうだなんて",
-  "album": "Single",
+  "album": "Single (2020)",
   "artist": "TUYU",
   "artwork": "https://i1.sndcdn.com/artworks-575cLN5NiuDSxyM9-rwsHsw-t500x500.jpg",
   "background": "https://i.ytimg.com/vi/M7FH1dL51oU/maxresdefault.jpg",
-  "description":"TUYU has been one of my favorite bands for a long time standing. The band plays Japanese rock songs, one of them being Being low as dirt, taking what's important from me. This was one of the first songs I heard from them, and it had instantly caught my attention. I really liked the pace and melody of the song, and the deep lyrics only pulled me in further.",
-  "about": "https://tuyu-official.jp/en/",
+  "description":"TUYU has been one of my favorite bands for a long time standing. The band plays Japanese rock songs, one of them being Being low as dirt, taking what's important from me. This was one of the first songs I heard from them, and it had instantly caught my attention. I really liked the pace and melody of the song, and the deep lyrics only pulled me in further. <a class='link' href='https://tuyu-official.jp/en/'>Learn More</a>",
   "mp3": "Songs/Doro.mp3" },
 
 {
   "song": "心予報 (Heart Forcast)",
-  "album": "Single",
+  "album": "Single (2020)",
   "artist": "Eve",
   "artwork": "https://i1.sndcdn.com/artworks-ReApheKygbX2yl80-suOg4A-t500x500.jpg",
   "background": "https://i.pinimg.com/originals/a6/0b/e8/a60be8796549d5a0292925d660312a8d.png",
-  "description":"Eve is a Japanese pop singer and songwriter. The first song I ever heard from himn was Heart Forcast. I had been on youtube browsing videos, when this came up in my feed. The thumbnail instantly caught my attention, and as I watched the music video i was stunned. Never had i seen a such beautiful animation done for a single solo song. I've been listening to his music since then.",
-  "about": "https://tuyu-official.jp/en/",
+  "description":"Eve is a Japanese pop singer and songwriter. The first song I ever heard from himn was Heart Forcast. I had been on youtube browsing videos, when this came up in my feed. The thumbnail instantly caught my attention, and as I watched the music video i was stunned. Never had i seen a such beautiful animation done for a single solo song. I've been listening to his music since then. <a class='link' href='https://eveofficial.com/'>Learn More</a>",
   "mp3": "Songs/heart.mp3" }];
 
 
@@ -572,7 +572,6 @@ function load() {
   description.innerHTML = playlist[currentSong]['description'];
   description.title = playlist[currentSong]['description'];
   artwork.setAttribute("style", "background:url(https://i.imgur.com/3idGgyU.png), url('" + playlist[currentSong]['artwork'] + "') center no-repeat;");
-  background.setAttribute("style", "background-image:url('" + playlist[currentSong]['background'] + "') ;");
   background.setAttribute("style", "background-image:url('" + playlist[currentSong]['background'] + "') ;");
   music.innerHTML = '<source src="' + playlist[currentSong]['mp3'] + '" type="audio/mp3">';
   music.load();
